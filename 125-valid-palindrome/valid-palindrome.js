@@ -4,13 +4,13 @@
  */
 var isPalindrome = function(s) {
 
-    let cleaned1 = s.toLowerCase();
+    s = s.toLocaleLowerCase();
     let cleaned = '';
 
-    for (let i = 0; i < cleaned1.length ; i++){
-        let code = cleaned1.charCodeAt(i);
+    for (let i = 0; i < s.length ; i++){
+        let code = s.charCodeAt(i);
         if ((code >= 48 && code <= 57) || (code >= 97 && code <= 122)){
-            cleaned += cleaned1[i];
+            cleaned += s[i];
         }
     }
 
@@ -26,4 +26,6 @@ var isPalindrome = function(s) {
     }
 
     return true;
-};
+
+
+}
